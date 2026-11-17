@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUNIL OFFICIAL | Official Telegram Community</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3058231074542660');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3058231074542660&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    /* ==========================================================================
+       Theme Variables: Deep Royal Purple, Electric Violet & Rose-Gold/Amber
+       ========================================================================== */
+    :root {
+      --bg-base: #0d0718;
+      --bg-deep: #07030e;
+      --card-top: #1a0e30;
+      --card-bottom: #110821;
+      --violet-primary: #8b5cf6;
+      --violet-bright: #a855f7;
+      --magenta-vivid: #ec4899;
+      --rose-gold: #f59e0b;
+      --rose-gold-light: #fde68a;
+      --text-white: #ffffff;
+      --text-muted: #c4b5fd;
+      --text-dim: #94a3b8;
+      --check-emerald: #10b981;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.34) 0%, transparent 55%),
+        radial-gradient(circle at 12% 85%, rgba(236, 72, 153, 0.2) 0%, transparent 48%),
+        radial-gradient(circle at 88% 82%, rgba(245, 158, 11, 0.16) 0%, transparent 48%),
+        linear-gradient(180deg, #130924 0%, var(--bg-deep) 100%);
+      color: var(--text-white);
+      font-family: var(--font-stack);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 14px 26px;
+    }
+
+    /* ==========================================================================
+       1. Top Ad Attribution Pill
+       ========================================================================== */
+    .top-ad-bar {
+      width: 100%;
+      max-width: 430px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .ad-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(26, 14, 48, 0.9);
+      border: 1px solid rgba(168, 85, 247, 0.38);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .ad-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--rose-gold);
+      box-shadow: 0 0 8px var(--rose-gold);
+      animation: dotGlow 1.8s infinite ease-in-out;
+    }
+
+    @keyframes dotGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.35); }
+    }
+
+    .ad-pill strong {
+      color: var(--rose-gold-light);
+      font-weight: 900;
+    }
+
+    /* ==========================================================================
+       2. Main Centered Card Structure
+       ========================================================================== */
+    .landing-card {
+      width: 100%;
+      max-width: 430px;
+      background: linear-gradient(175deg, var(--card-top) 0%, var(--card-bottom) 100%);
+      border: 1.5px solid rgba(168, 85, 247, 0.42);
+      border-radius: 28px;
+      padding: 28px 22px 26px;
+      text-align: center;
+      box-shadow:
+        0 26px 65px rgba(0, 0, 0, 0.8),
+        0 0 42px rgba(139, 92, 246, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      margin: auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle Top Accent Line */
+    .landing-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 16%;
+      right: 16%;
+      height: 3px;
+      border-radius: 0 0 999px 999px;
+      background: linear-gradient(90deg, var(--violet-primary), var(--magenta-vivid), var(--rose-gold));
+    }
+
+    /* ==========================================================================
+       3. Circular Profile Logo Frame (145px x 145px)
+       ========================================================================== */
+    .logo-wrapper {
+      width: 145px;
+      height: 145px;
+      margin: 0 auto 18px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--violet-bright) 0%, var(--magenta-vivid) 52%, var(--rose-gold) 100%);
+      box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.65),
+        0 0 26px rgba(236, 72, 153, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #120924;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-fallback {
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       4. Channel Title, Sub-handle & Trust Pill Badge
+       ========================================================================== */
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-bottom: 4px;
+    }
+
+    .channel-title {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #ffffff 15%, #f5d0fe 65%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.15;
+    }
+
+    .verified-badge {
+      width: 22px;
+      height: 22px;
+      color: var(--rose-gold);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.45));
+    }
+
+    .sub-handle {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .trust-pill {
+      display: inline-block;
+      padding: 7px 15px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(139, 92, 246, 0.22) 0%, rgba(236, 72, 153, 0.22) 100%);
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      color: var(--rose-gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ==========================================================================
+       5. 20-Second Countdown Timer Box
+       ========================================================================== */
+    .countdown-box {
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.16) 0%, rgba(17, 8, 33, 0.85) 100%);
+      border: 1px solid rgba(192, 132, 252, 0.36);
+      border-radius: 18px;
+      padding: 15px 16px;
+      margin-bottom: 20px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .countdown-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .countdown-value-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .countdown-number {
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      background: linear-gradient(180deg, #ffffff 0%, #fde68a 55%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .countdown-unit {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--rose-gold-light);
+    }
+
+    /* ==========================================================================
+       6. Pulsing Primary Telegram CTA Button
+       ========================================================================== */
+    .telegram-cta-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #7c3aed 0%, #c026d3 52%, #ec4899 100%);
+      border: 1px solid rgba(253, 230, 138, 0.55);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow:
+        0 12px 28px rgba(192, 38, 211, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.45);
+      animation: ctaPulse 2s infinite;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .telegram-cta-btn:hover {
+      transform: translateY(-2px) scale(1.015);
+      box-shadow:
+        0 16px 36px rgba(236, 72, 153, 0.62),
+        inset 0 1px 2px rgba(255, 255, 255, 0.65);
+    }
+
+    .telegram-cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    @keyframes ctaPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.62), 0 12px 28px rgba(192, 38, 211, 0.45);
+      }
+      70% {
+        box-shadow: 0 0 0 14px rgba(236, 72, 153, 0), 0 12px 28px rgba(192, 38, 211, 0.45);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(236, 72, 153, 0), 0 12px 28px rgba(192, 38, 211, 0.45);
+      }
+    }
+
+    /* Subtle Shine Sweep */
+    .telegram-cta-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-24deg);
+      animation: shineSweep 3.2s infinite;
+    }
+
+    @keyframes shineSweep {
+      0% { left: -80%; }
+      48% { left: 140%; }
+      100% { left: 140%; }
+    }
+
+    .tg-icon {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       7. 3-Item Check-List
+       ========================================================================== */
+    .features-list {
+      list-style: none;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(168, 85, 247, 0.24);
+      border-radius: 16px;
+      padding: 14px 16px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f3e8ff;
+      line-height: 1.35;
+    }
+
+    .check-badge {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.18);
+      border: 1px solid rgba(16, 185, 129, 0.55);
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .check-badge svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* ==========================================================================
+       8. Footer Note
+       ========================================================================== */
+    .footer-note {
+      width: 100%;
+      max-width: 430px;
+      margin-top: 16px;
+      text-align: center;
+      padding: 0 10px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 375px) {
+      .landing-card {
+        padding: 24px 16px 22px;
+      }
+      .logo-wrapper {
+        width: 130px;
+        height: 130px;
+      }
+      .channel-title {
+        font-size: 24px;
+      }
+      .trust-pill {
+        font-size: 10px;
+        padding: 6px 12px;
+      }
+      .telegram-cta-btn {
+        font-size: 14px;
+        padding: 15px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Attribution Badge -->
+  <header class="top-ad-bar">
+    <div class="ad-pill">
+      <span class="ad-dot"></span>
+      <span>Ads by <strong>ClickForgeAds</strong></span>
+    </div>
+  </header>
+
+  <!-- Centered Landing Card -->
+  <main class="landing-card">
+
+    <!-- Circular Profile Logo Frame (145px x 145px) -->
+    <div class="logo-wrapper">
+      <div class="logo-inner">
+        <!-- Primary Logo Image ('2014.jpg') -->
+        <img
+          src="2014.jpg"
+          alt="SUNIL OFFICIAL Logo"
+          onerror="this.style.display='none'; document.getElementById('soSvgFallback').style.display='flex';"
+        />
+
+        <!-- Inline SVG Monogram Fallback ('SO' inside a sleek badge) -->
+        <div id="soSvgFallback" class="logo-fallback" aria-label="SO Monogram">
+          <svg width="137" height="137" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="soBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2e1065" />
+                <stop offset="55%" stop-color="#4c1d95" />
+                <stop offset="100%" stop-color="#1e1b4b" />
+              </linearGradient>
+              <linearGradient id="soGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a" />
+                <stop offset="50%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#ec4899" />
+              </linearGradient>
+            </defs>
+            <circle cx="70" cy="70" r="68" fill="url(#soBgGrad)" />
+            <circle cx="70" cy="70" r="56" fill="none" stroke="url(#soGoldGrad)" stroke-width="2.5" stroke-dasharray="6 4" />
+            <circle cx="70" cy="70" r="48" fill="rgba(13, 7, 24, 0.65)" stroke="url(#soGoldGrad)" stroke-width="1.5" />
+            <text
+              x="70"
+              y="81"
+              text-anchor="middle"
+              fill="url(#soGoldGrad)"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="38"
+              font-weight="900"
+              letter-spacing="2"
+            >SO</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel Title & Verified Badge -->
+    <div class="title-row">
+      <h1 class="channel-title">SUNIL OFFICIAL</h1>
+      <svg class="verified-badge" viewBox="0 0 24 24" fill="currentColor" aria-label="Verified">
+        <path d="M12 2L14.8 4.2L18.4 3.8L19.6 7.2L22.6 9.2L21.6 12.7L22.6 16.2L19.6 18.2L18.4 21.6L14.8 21.2L12 23.4L9.2 21.2L5.6 21.6L4.4 18.2L1.4 16.2L2.4 12.7L1.4 9.2L4.4 7.2L5.6 3.8L9.2 4.2L12 2ZM10.4 16.2L17.1 9.5L15.7 8.1L10.4 13.4L8.1 11.1L6.7 12.5L10.4 16.2Z" />
+      </svg>
+    </div>
+
+    <!-- Sub-handle / Tagline -->
+    <p class="sub-handle">Official Telegram Community</p>
+
+    <!-- Trust Pill Badge -->
+    <div class="trust-pill">
+      🔥 INDIA'S TRUSTED SPORTS ANALYST 🔥
+    </div>
+
+    <!-- 20-Second Countdown Timer Box -->
+    <div class="countdown-box">
+      <span id="timerLabelText" class="countdown-label">Free Joining Link Closes In</span>
+      <div class="countdown-value-row">
+        <span id="countdownNumber" class="countdown-number">20</span>
+        <span id="countdownUnit" class="countdown-unit">seconds left</span>
+      </div>
+    </div>
+
+    <!-- Primary Pulsing Telegram CTA Button -->
+    <a
+      id="joinTelegramBtn"
+      href="https://telegram.me/+8_81AGg8CTgxNWU1"
+      class="telegram-cta-btn"
+    >
+      <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+      </svg>
+      <span>JOIN TELEGRAM CHANNEL</span>
+    </a>
+
+    <!-- 3-Item Features Check-List -->
+    <ul class="features-list">
+      <li class="feature-item">
+        <span class="check-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </span>
+        <span>IPL, BBL, PSL &amp; International Match Reports</span>
+      </li>
+
+      <li class="feature-item">
+        <span class="check-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </span>
+        <span>High-Accuracy Toss &amp; Match Insights</span>
+      </li>
+
+      <li class="feature-item">
+        <span class="check-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </span>
+        <span>100% Free Telegram Channel Access</span>
+      </li>
+    </ul>
+
+  </main>
+
+  <!-- Footer Note -->
+  <footer class="footer-note">
+    Click the button above if you are not redirected automatically after the timer ends.
+  </footer>
+
+  <!-- 20-Second Countdown & Auto-Redirect Script -->
+  <script>
+    (function () {
+      const CHANNEL_URL = "https://telegram.me/+8_81AGg8CTgxNWU1";
+      let secondsLeft = 20;
+
+      const numberEl = document.getElementById("countdownNumber");
+      const unitEl = document.getElementById("countdownUnit");
+      const labelEl = document.getElementById("timerLabelText");
+
+      const timer = setInterval(function () {
+        secondsLeft -= 1;
+
+        if (secondsLeft > 0) {
+          numberEl.textContent = secondsLeft < 10 ? "0" + secondsLeft : String(secondsLeft);
+        } else {
+          clearInterval(timer);
+          numberEl.textContent = "00";
+          unitEl.textContent = "";
+          labelEl.textContent = "Opening SUNIL OFFICIAL Telegram...";
+
+          // Automatically open the Telegram channel when timer hits 0
+          window.location.href = CHANNEL_URL;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
